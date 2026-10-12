@@ -1,0 +1,17 @@
+
+# Python virtual environment
+.venv/
+
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Logs and local artifacts
+*.log
+.DS_Store
