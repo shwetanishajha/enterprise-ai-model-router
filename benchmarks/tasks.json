@@ -1,0 +1,56 @@
+
+[
+  {
+    "id": "FDD-001",
+    "task_type": "extraction",
+    "data_classification": "internal",
+    "prompt": "Extract revenue and EBITDA from this financial summary: Revenue was £12.5 million and EBITDA was £2.1 million.",
+    "expected_answer": {
+      "revenue_millions": 12.5,
+      "ebitda_millions": 2.1
+    }
+  },
+  {
+    "id": "FDD-002",
+    "task_type": "extraction",
+    "data_classification": "confidential",
+    "prompt": "Extract revenue and EBITDA from this financial summary: Revenue was £18.0 million and EBITDA was £3.6 million.",
+    "expected_answer": {
+      "revenue_millions": 18.0,
+      "ebitda_millions": 3.6
+    }
+  },
+  {
+    "id": "FDD-003",
+    "task_type": "reasoning",
+    "data_classification": "internal",
+    "prompt": "Revenue increased from £10 million to £12 million, while EBITDA remained £2 million. Calculate revenue growth and explain the change in EBITDA margin.",
+    "expected_answer": {
+      "revenue_growth_percent": 20.0,
+      "previous_ebitda_margin_percent": 20.0,
+      "current_ebitda_margin_percent": 16.6667
+    }
+  },
+  {
+    "id": "FDD-004",
+    "task_type": "classification",
+    "data_classification": "internal",
+    "prompt": "Classify this finding: Customer concentration increased, with the largest customer contributing 42% of revenue.",
+    "expected_answer": {
+      "category": "customer_concentration_risk"
+    }
+  },
+  {
+    "id": "FDD-005",
+    "task_type": "summarisation",
+    "data_classification": "internal",
+    "prompt": "Summarise this finding for an investment committee: Revenue grew 20%, but EBITDA remained flat at £2 million. EBITDA margin declined from 20% to 16.7%.",
+    "expected_answer": {
+      "key_findings": [
+        "revenue_growth",
+        "flat_ebitda",
+        "margin_decline"
+      ]
+    }
+  }
+]
